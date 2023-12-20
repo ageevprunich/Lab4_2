@@ -1,6 +1,6 @@
-FROM alpine
+FROM alpine:latest
 RUN apk add --update python3 py-pip
-COPY . .
+COPY . /app
 WORKDIR /app
 ENTRYPOINT ["python"]
-CMD ["goods.py" , "test_good.py "]
+CMD ["test_good.py"]
