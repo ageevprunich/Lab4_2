@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run tests
       run: |
-        python3 -m unittest test_good.py
+        python3 -m unittest test_webapp.py
       env:
         CI: true    
     - name: Setup AWS ECR Details
