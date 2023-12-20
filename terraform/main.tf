@@ -50,14 +50,7 @@ resource "aws_lightsail_container_service_deployment_version" "my_app_deployment
     # Consistent with the port exposed by the Dockerfile and app.py
     container_port = 8080
 
-    health_check {
-      healthy_threshold   = 2
-      unhealthy_threshold = 2
-      timeout_seconds     = 2
-      interval_seconds    = 5
-      path                = "/"
-      success_codes       = "200-499"
-    }
+    
   }
 
   service_name = aws_lightsail_container_service.my_application.name
